@@ -140,7 +140,7 @@ blockquote {
       "article-1 article-1 article-2 article-5"
       "article-3 article-4 article-4 article-5";
     gap: 1.5rem;
-    margin: 200px 150px;
+    margin: 180px 100px 100px 150px;
   }
 
   .testimony {
