@@ -1,0 +1,151 @@
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background: var(--light-grayish-blue);
+}
+
+main {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  /* align-items: center;
+  justify-content: center; */
+  grid-template-areas:
+    "article-1"
+    "article-2"
+    "article-3"
+    "article-4"
+    "article-5";
+  max-width: 575rem;
+  margin: 3em 2.25em;
+  gap: 1.25em;
+}
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 2em;
+  border-radius: 0.8rem;
+  gap: 1.25em;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.one {
+  grid-area: article-1;
+  background: var(--moderate-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right 0.625rem top;
+}
+
+.two {
+  grid-area: article-2;
+  background: var(--very-dark-grayish-blue);
+}
+
+.three {
+  grid-area: article-3;
+  background: var(--white);
+}
+
+.four {
+  grid-area: article-4;
+  background: var(--very-dark-blackish-blue);
+}
+
+.five {
+  grid-area: article-5;
+  background: var(--white);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.name-2 {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 600;
+}
+
+.title-2,
+.job-qual2 {
+  font-weight: 600;
+  color: var(--very-dark-grayish-blue);
+  opacity: 0.7;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+picture img {
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--light-grayish-blue);
+  font-weight: 600;
+}
+
+.title {
+  color: var(--light-gray);
+  font-weight: 500;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.job-details {
+  font-size: 1.25rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.job-qualifications {
+  color: var(--light-gray);
+  font-weight: 500;
+}
+
+@media (min-width: 37.94rem) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "article-1 article-1 article-2 article-5"
+      "article-3 article-4 article-4 article-5";
+    gap: 1.5rem;
+    margin: 100px 100px;
+  }
+
+  .testimony {
+    padding: 2em;
+    border-radius: 0.8rem;
+    gap: 1.25em;
+  }
+}
